@@ -1,0 +1,152 @@
+@use "../variables/variables.scss" as *;
+.header {
+  font-size: 14px;
+  box-shadow: $globalNavBoxShadow;
+  position: relative;
+  overflow: hidden;
+  &__nav {
+    height: 99px;
+    display: flex;
+    align-items: center;
+    margin: 0 auto;
+  }
+  &__links {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+  }
+  &__logo {
+    width: 51px;
+  }
+  &__img {
+    max-width: 100%;
+  }
+
+  &__list {
+    display: flex;
+    align-items: center;
+  }
+  &__list--link {
+    margin-left: 20px;
+    cursor: pointer;
+  }
+  &__list--link:hover {
+    color: $colorGreenAccent;
+  }
+  &__list--one {
+    padding-left: 20px;
+    font-weight: 500;
+    letter-spacing: 2px;
+  }
+  &__location--icon {
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  &__find {
+    font-weight: 500;
+    margin-right: 40px;
+  }
+  &__joinbtn {
+    background-color: $colorBlack;
+    color: $colorTextWhite;
+  }
+  &__signbtn {
+    margin-right: 10px;
+  }
+  &__joinbtn:hover {
+    background-color: $colorBlack70;
+    border-color: $colorBlack70;
+  }
+}
+@media (max-width: 1520px) {
+  .header .container {
+    width: 92.5%;
+    margin: 0 auto;
+  }
+}
+@media (max-width: 1024px) {
+  .header {
+    &__nav {
+      height: 83px;
+    }
+  }
+  .header .container {
+    width: 95%;
+  }
+}
+.burger-menu {
+  display: none;
+  width: 20px;
+}
+@media (max-width: 790px) {
+  .header {
+    position: relative;
+    height: 72px;
+    .burger-menu {
+      display: block;
+      position: absolute;
+      right: 20px;
+      top: calc(36px - 10px);
+      cursor: pointer;
+    }
+    &__logo {
+      width: 40px;
+    }
+    &__links {
+      position: absolute;
+      z-index: 3;
+      background-color: $colorWhite;
+      box-shadow: inset 0 4px 3px -3px rgba(0, 0, 0, 0.1),
+        inset 0 4px 2px -2px rgba(0, 0, 0, 0.07);
+      width: 80vw;
+      height: calc(100vh - 72px);
+      right: -1000px;
+      top: 72px;
+      flex-direction: column;
+      justify-content: flex-start;
+      padding: 32px 0;
+      background-color: #eeeeee;
+    }
+    &__list--link {
+      margin: 0;
+    }
+    &__list--one {
+      padding: 0;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      font-size: 19px;
+      margin: 0;
+      position: relative;
+      padding-bottom: 35px;
+    }
+    &__list--one::before {
+      content: "";
+      position: absolute;
+      width: 90%;
+      height: 2px;
+      background-color: $colorBlack10;
+      bottom: 0;
+      left: 50%;
+      transform: translateX(-50%);
+;
+    }
+    &__list--one a {
+      padding: 16px 32px;
+      display: block;
+    }
+    &__list--two {
+      display: flex;
+      flex-direction: column-reverse;
+      align-items: flex-start;
+      padding-left: 24px;
+      margin-top: 30px;
+    }
+    &__location {
+      margin-top: 20px;
+    }
+    &__signbtn {
+      margin-right: 10px;
+    }
+  }
+}

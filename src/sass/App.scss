@@ -1,0 +1,26 @@
+// import variables
+@use "./variables/variables.scss" as *;
+// import layout
+@use "./layout/mediaQueries.scss" as *;
+// import components
+@use "./components/header.scss" as *;
+@use "./components/buttons.scss" as *;
+@use "./components/homeCards.scss" as *;
+@use "./components/footer.scss" as *;
+@use "./components/rewards.scss" as *;
+@use "./components/form.scss" as *;
+@use "./components/menu.scss" as *;
+@use "./components/bag.scss" as *;
+// import reset 
+@use "./base/reset.scss" as *;
+.container {
+  margin: 0 auto;
+}
+* {
+  box-sizing: border-box;
+}
+body {
+  font-family: 'Roboto', sans-serif;
+  margin: 0;
+  padding: 0;
+}

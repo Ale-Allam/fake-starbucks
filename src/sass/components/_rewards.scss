@@ -1,0 +1,332 @@
+@use "../variables/variables.scss" as *;
+.rewards-section-header {
+  text-align: center;
+}
+.rewards-section-title {
+  letter-spacing: 2px;
+  font-size: 31px;
+  padding: 0 50px;
+}
+.rewards-section-text {
+  letter-spacing: 2px;
+  line-height: 1.6;
+  padding: 0 50px;
+}
+.banner {
+  position: sticky;
+  z-index: 2;
+  top: 0;
+  background-color: $colorHouseGreen;
+  color: $colorTextWhite;
+  padding: 15px;
+  &__title {
+    font-size: 15px;
+    letter-spacing: 1px;
+  }
+}
+.rewards {
+  background-color: rgb(212, 233, 226);
+  background-image: url("https://www.starbucks.com/weblx/images/rewards/hero/xl-hero-desktop_2021.png");
+  background-position: 50%;
+  background-size: auto 100%;
+  background-repeat: no-repeat;
+
+  &__container {
+    display: flex;
+    align-items: center;
+  }
+}
+.hero {
+  padding: 100px 0;
+  &__title {
+    font-size: 30px;
+    line-height: 1.5;
+    letter-spacing: 1px;
+  }
+  &__text {
+    font-size: 19px;
+  }
+  &__btn {
+    margin-top: 20px;
+    background-color: $colorGreenAccent;
+    color: $colorTextWhite;
+    font-size: 15px;
+  }
+}
+@media (max-width: 805px) {
+  .hero {
+    height: 100%;
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+}
+.rewardssteps {
+  padding: 100px 0;
+  &__steps {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+  &__step {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  &__num {
+    color: $colorGreenAccent;
+    width: 50px;
+    height: 50px;
+    border: 1px solid $colorGreenAccent;
+    border-radius: 50%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 25px;
+    margin-bottom: 20px;
+  }
+  &__stitle {
+    font-weight: bold;
+  }
+  &__explane {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+.forfree {
+  padding: 50px 0 0;
+  background-color: $colorGreenLightHsl;
+  &__title {
+    font-size: 31px;
+    text-align: center;
+  }
+  &__tabs {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    gap: 10px;
+  }
+  &__tab {
+    padding-bottom: 20px;
+    font-size: 24px;
+    text-align: center;
+    min-width: 60px;
+    cursor: pointer;
+  }
+  &__activetab {
+    border-bottom: 5px solid $colorGreenStarbucks;
+  }
+  &__star {
+    color: $colorGold;
+    font-size: 19px;
+    margin-left: -7px;
+  }
+  &__products {
+    width: 100%;
+    height: 300px;
+    background-color: $colorGreenLightTwo;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__product {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+  }
+  &__item {
+    position: absolute;
+    opacity: 0;
+    transition: $buttonTransition;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+    // gap: 50px;
+  }
+  &__activeItem {
+    transition: $buttonTransition;
+    opacity: 1;
+  }
+  &__image {
+    max-width: 375px;
+  }
+  &__image img {
+    max-width: 100%;
+  }
+  &__description {
+    max-width: 375px;
+  }
+  &__description_title {
+    font-size: 24px;
+  }
+  &__description_text {
+    line-height: 1.6;
+  }
+}
+@media (max-width: 770px) {
+  .forfree {
+    &__products {
+      height: 450px;
+    }
+    &__product {
+      width: 100%;
+    }
+    &__item {
+      padding: 10px;
+      flex-direction: column;
+      text-align: center;
+    }
+  }
+}
+.endless {
+  padding: 100px 0;
+  &__section {
+    padding-top: 50px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 40px;
+  }
+  &__explane {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    margin-top: 20px;
+  }
+  &__img {
+    width: 100px;
+    margin-bottom: 30px;
+  }
+  &__img img {
+    max-width: 100%;
+  }
+  &__stitle {
+    font-weight: bold;
+  }
+  &__description {
+    text-align: center;
+    line-height: 1.6;
+  }
+}
+.model {
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(0, 0, 0, 0.202);
+  position: fixed;
+  top: 0;
+  left: 0;
+  &__model{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  &__popup {
+    width: 420px;
+    height: 429px;
+    border-radius: 20px;
+    background-color: #fff;
+    position: relative;
+    overflow: hidden;
+  }
+  &__close {
+    text-align: end;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+  &__close {
+    text-align: end;
+    padding: 20px;
+    position: absolute;
+    z-index: 1;
+    right: 0;
+  }
+  &__image {
+    position: absolute;
+    top: 0;
+    overflow: hidden;
+  }
+  &__image img {
+    max-width: 100%;
+  }
+  
+  &__body {
+    padding-top: 240px;
+    text-align: center;
+  }
+  &__title {
+    font-size: 24px;
+  }
+  &__text {
+    font-size: 21px;
+    line-height: 1.6;
+  }
+  &__control {
+    padding: 20px;
+  }
+}
+.cashcard {
+  background-color: $colorNeutralWarm;
+  padding: 50px 0 0;
+  // &__header {
+
+  // }
+  &__body {
+    padding-top: 50px;
+  }
+  &__section {
+    display: grid;
+    grid-template-columns: 15% auto;
+    padding: 10px;
+  }
+  &__guid {
+    margin-bottom: 25px;
+  }
+  &__guid_title {
+    font-size: 21px;
+    margin: 0px;
+  }
+  &__guid_text {
+    margin-top: 10px;
+  }
+  &__step_container {
+    display: flex;
+  }
+  &__step {
+    flex: 1;
+  }
+  &__step {
+    display: flex;
+    gap: 10px;
+  }
+  &__step_image {
+    width: 130px;
+  }
+  &__step_image img {
+    max-width: 100%;
+  }
+  &__step_body {
+    flex: 1;
+  }
+
+}
+
+@media (max-width:991px) {
+  .cashcard {
+    &__section {
+      grid-template-columns: 1fr;
+    }
+    &__step_container {
+      flex-direction: column;
+    }
+  }
+}

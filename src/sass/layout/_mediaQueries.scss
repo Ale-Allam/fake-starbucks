@@ -1,0 +1,30 @@
+/*  Small  */
+
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium */
+
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Larg */
+
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+
+// xlarg
+@media (min-width: 1520px) {
+  .container {
+    width: 1440px;
+  }
+}

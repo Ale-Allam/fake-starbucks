@@ -1,0 +1,260 @@
+@use "../variables/variables.scss" as *;
+.form-h1 {
+  font-size: 28px;
+  font-family: 'Open Sans', sans-serif;
+  font-weight: 800;
+  text-align: center;
+  margin: 40px 0 60px;
+}
+.h2-join-page {
+  color: $colorTextBlackSoft;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 800;
+  letter-spacing: 1px;
+}
+.p-join-page {
+  color: $colorTextBlackSoft;
+  width: clamp(300px, 100%, 500px);
+  margin: 0 auto;
+  text-align: center;
+  margin-bottom: 50px;
+  font-weight: 500;
+}
+.form {
+  font-family: 'Open Sans', sans-serif;
+  padding: 32px;
+  box-shadow: 0 2px 4px rgba(0,0,0,.07), 0 4px 5px rgba(0,0,0,.06), 0 1px 10px rgba(0,0,0,.1);
+  border-radius: 12px;
+  width: fit-content;
+  width: clamp(300px, 100%, 500px);
+  &__header {
+    margin: 0;
+    font-size: 14px;
+    font-weight: 500;
+    margin-bottom: 20px;
+  }
+  &__style {
+    display: flex;
+    flex-direction: column;
+  }
+  &__personal--info {
+    margin-top: 40px;
+    margin-bottom: 10px;
+  }
+  &__account--secuirty {
+    margin: 50px 0 10px;
+  }
+  &__main--inputdiv {
+    margin: 16px 0 0px;
+  }
+  &__inputdiv {
+    background-color: $colorWhite;
+    border-radius: 8px;
+    box-shadow: 0 0 0 1px $colorBlack40;
+    display: block;
+    padding: 12px 16px;
+    position: relative;
+    transition: border .2s linear .2s;
+    transition: box-shadow .2s;
+  }
+  &__label {
+    position: absolute;
+    background-color: $colorWhite;
+    font-weight: 500;
+    font-size: 19px;
+    padding: 5px;
+    top: 5px;
+    cursor: text;
+  }
+  &__passwordshow {
+    position: absolute;
+    right: 10px;
+    top: 15px;
+    cursor: pointer;
+  }
+  &__input {
+    border: none;
+    width: 100%;
+    line-height: 10px;
+    background-color: transparent;
+    font-size: 21px;
+  }
+  &__input:focus {
+    border: none;
+    outline: none;
+  }
+  &__passwordhit {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 15px;
+    margin-top: 5px;
+    overflow: hidden;
+    transition: .3s;
+  }
+  &__footer {
+    padding-right: 50px;
+  }
+  &__aboutpassword {
+    padding: 0 15px;
+    line-height: 1.6;
+    font-weight: 500;
+    margin-bottom: 35px;
+  }
+  &__reward--header {
+    margin: 30px 0;
+    font-size: 15px;
+    letter-spacing: 1px;
+    color: $colorTextBlackSoft;
+    font-weight: 700;
+  }
+  &__wtsnew {
+    font-size: 15px;
+    line-height: 1.6;
+    font-weight: 500;
+  }
+  &__product {
+    margin-left: 40px;
+    color: $colorTextBlackSoft;
+    font-size: 15px;
+    font-weight: 600;
+    margin-bottom: 50px;
+  }
+  &__checkbox {
+    display: block;
+    margin-bottom: 25px;
+    margin-top: 40px;
+  }
+  
+  &__custominput {
+    padding: 0;
+    height: initial;
+    width: initial;
+    margin-bottom: 0;
+    display: none;
+    cursor: pointer;
+  }
+  
+  &__customlabel {
+    position: relative;
+    cursor: pointer;
+  }
+  
+  &__customlabel:before {
+    content:'';
+    --webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid $colorGreenAccent;
+    border-radius: 5px;
+    padding: 12px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 5px;
+  }
+  &__custominput:checked + &__customlabel:before {
+    background-color: $colorGreenAccent;;
+  }
+  &__customlabel:after {
+    content: "";
+    display: block;
+    position: absolute;
+    top: 2px;
+    left: 9px;
+    width: 6px;
+    height: 15px;
+    border: solid white;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+    scale: 0;
+    transition: .3s;
+    transition-timing-function: cubic-bezier(0, 2.13, 1, -1.26);
+  }
+  &__custominput:checked + &__customlabel:after {
+    scale: 1;
+  }
+  &__checkbox--check {
+    margin: 40px 0 30px;
+  }
+  &__checkbox--yes {
+    font-size: 15px;
+    font-weight: 500;
+    margin-left: 5px;
+  }
+  &__checkbox--details {
+    font-weight: 800;
+    color: $colorGreenAccent;
+  }
+  &__forgetname,
+  &__forgetpass {
+    color: $colorGreenAccent;
+    margin: 5px 0;
+    font-weight: 800;
+    cursor: pointer;
+  }
+  .form-text-underlin {
+    text-decoration: underline;
+  }
+  .form-text-underlin:hover {
+    text-decoration: none;
+  }
+  &__btn {
+    font-family: 'Open Sans', sans-serif;
+    background-color: $colorGreenAccent;
+    color: white;
+    border-radius: 500px;
+    border: none;
+    box-shadow: 0 0 6px rgba(0,0,0,.24), 0 8px 12px rgba(0,0,0,.14);
+    font-size: 18px;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 18px 25px;
+    margin: 0 0 0 auto;
+    display: block;
+    margin-top: 50px;
+  }
+  &__btn:active {
+    transform: translateY(5px);
+  }
+  &__btn:hover {
+    background-color: $colorGreenStarbucks;
+  }
+  &__warning {
+    color: #d62b1f;
+    font-size: 15px;
+    margin: 5px 0 0;
+    font-weight: 500;
+    transition: .2s;
+    overflow: hidden;
+    margin-left: 20px;
+  }
+}
+@media (max-width: 450px) {
+  .form {
+    padding: 15px !important;
+  }
+}
+.joinRewards {
+  text-align: center;
+  padding: 80px 0;
+  &__header {
+    color: $colorGreenAccent;
+    letter-spacing: 2px;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  &__details {
+    letter-spacing: 1px;
+    font-size: 15px;
+    font-weight: 400;
+    line-height: 1.6;
+  }
+  &__btn {
+    color: $colorGreenAccent;
+    font-weight: 700;
+    font-size: 16px;
+  }
+}
+
+
